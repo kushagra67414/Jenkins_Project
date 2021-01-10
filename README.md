@@ -104,6 +104,22 @@ In other words jenkins master is a place where you have your jenkins installed.
 also ,We use a wrapper method available with the "Pipeline Maven Integration Plugin" which
 helps you to define which maven installation we will be using.
 
+SCRIPT :
+
+```
+node{
+    stage('Checkout'){
+        git branch: 'main' , url: 'https://github.com/kushagra67414/SpringPetClinic.git'
+    }
+    stage('Build'){
+        withMaven(maven: 'C:\Users\Dell\Downloads\apache-maven-3.6.3'){
+            bat 'mvn compile'
+        }
+    }
+}
+
+```
+
 ![Screenshot (1070)](https://user-images.githubusercontent.com/46487696/104125921-cbcb9180-537f-11eb-9b23-3af3fcf132ba.png)
 ![Screenshot (1072)](https://user-images.githubusercontent.com/46487696/104125922-ccfcbe80-537f-11eb-8a69-5327d53ff313.png)
 
