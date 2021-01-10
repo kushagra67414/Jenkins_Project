@@ -37,10 +37,24 @@ go to Build > click on "Add Build Setup" > invoke top-level maven targets > Sele
 Now, Click on the Build now  to have a build of a project and check if the build get Success of Failed.
 
 ![Screenshot (1055)](https://user-images.githubusercontent.com/46487696/104104288-222bc800-52cd-11eb-9ae9-d770919267b5.png)
-
+t
 Similarly create a test petclinic job at jenkins. Let's say **test_petClinic**.
 
 ![Screenshot (1056)](https://user-images.githubusercontent.com/46487696/104104339-63bc7300-52cd-11eb-8eca-8bd816c4008e.png)
 ![Screenshot (1057)](https://user-images.githubusercontent.com/46487696/104104340-64eda000-52cd-11eb-97e2-d7e5d06e0fa2.png)
 ![Screenshot (1058)](https://user-images.githubusercontent.com/46487696/104104342-64eda000-52cd-11eb-9417-c68b0574b4cd.png)
+
+
+
+## Project-2 => triggering test job after trigerring the other job first.
+
+Here, if we want to trigger test_petClinic job we can set BUILD TRIGGERS of another job, So that if the given job get triggered the other automatically get trigger.
+
+Let's see in below output =>
+
+We will trigger Test_petClinic job with the help of Compile_petClinic job
+
+Go to test_petClinic configuration part > build trigger > Select "BUILD AFTER OTHER PROJECTS ARE BUILT" > give the project/job so that your current job can trigger after the build of this job.
+
+![Screenshot (1059)](https://user-images.githubusercontent.com/46487696/104123069-e9442f80-536e-11eb-9309-645f8d23b252.png)
 
