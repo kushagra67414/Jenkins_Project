@@ -82,3 +82,35 @@ Green : done the execution, Blue : not started yet , Yellow: currently executing
 ![Screenshot (1063)](https://user-images.githubusercontent.com/46487696/104124852-1bf32580-5379-11eb-951f-88d29c60ad56.png)
 ![Screenshot (1065)](https://user-images.githubusercontent.com/46487696/104124854-1d245280-5379-11eb-89f0-d0f51409fc5a.png)
 
+
+## Project-4 => Transformng your delivery pipeline in the form of scripted pipeline 
+
+Prerequisite: Install Pipeline Maven Integration
+
+Pipeline Maven Integration helps to integrate maven with jenkins in easy manner and also provide wrapped method that we can used in SCRIPTED pipeline.
+
+![Screenshot (1068)](https://user-images.githubusercontent.com/46487696/104125777-0254dc80-537f-11eb-8b0f-c01879090fa3.png)
+
+Here, We will Select Pipeline because we are creating the pipeline with a code/script.
+
+![Screenshot (1069)](https://user-images.githubusercontent.com/46487696/104125778-03860980-537f-11eb-86c4-49c2fcb4442a.png)
+
+Configuration part: Here we will create a pipeline script.
+
+Node Section: Node is where you run your job and our job will job will run on master by default because right now we only have jenkins master.
+
+In other words jenkins master is a place where you have your jenkins installed.
+
+also ,We use a wrapper method available with the "Pipeline Maven Integration Plugin" which
+helps you to define which maven installation we will be using.
+
+![Screenshot (1070)](https://user-images.githubusercontent.com/46487696/104125921-cbcb9180-537f-11eb-9b23-3af3fcf132ba.png)
+![Screenshot (1072)](https://user-images.githubusercontent.com/46487696/104125922-ccfcbe80-537f-11eb-8a69-5327d53ff313.png)
+
+Console Output and Stage View =>
+
+![Screenshot (1073)](https://user-images.githubusercontent.com/46487696/104125980-14834a80-5380-11eb-9fb0-ec0e4dfc0dbc.png)
+![Screenshot (1074)](https://user-images.githubusercontent.com/46487696/104125982-15b47780-5380-11eb-95d0-5ae5b4e7905c.png)
+![Screenshot (1075)](https://user-images.githubusercontent.com/46487696/104125984-164d0e00-5380-11eb-8f6d-9557f54de6f7.png)
+
+
