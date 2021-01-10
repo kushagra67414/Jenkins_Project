@@ -58,3 +58,27 @@ Go to test_petClinic configuration part > build trigger > Select "BUILD AFTER OT
 
 ![Screenshot (1059)](https://user-images.githubusercontent.com/46487696/104123069-e9442f80-536e-11eb-9309-645f8d23b252.png)
 
+
+## Project-3 => Create a Multistage pipeline and viewing using "Build Pipeline Plugin" 
+
+Here, First Download the given plugin i.e Build Pipeline.
+
+![Screenshot (1060)](https://user-images.githubusercontent.com/46487696/104123140-59eb4c00-536f-11eb-8e57-669b1090cef2.png)
+
+Go to all jobs you will see a plus button click it. 
+
+![Screenshot (1061)](https://user-images.githubusercontent.com/46487696/104124747-6b852180-5378-11eb-8f6d-8778d5483e2d.png)
+
+Select Build Pipeline view and Give any name of your Pipeline you want > Click on ok and you will redirect to the configuration part.
+
+Go to "Pipeline Flow" and Select Initial Job > Click okay 
+
+![Screenshot (1062)](https://user-images.githubusercontent.com/46487696/104124784-9cfded00-5378-11eb-97dd-5d2e2d19d453.png)
+
+You will be redirect to your pipeline view.
+
+Green : done the execution, Blue : not started yet , Yellow: currently executing , Red : failed
+
+![Screenshot (1063)](https://user-images.githubusercontent.com/46487696/104124852-1bf32580-5379-11eb-951f-88d29c60ad56.png)
+![Screenshot (1065)](https://user-images.githubusercontent.com/46487696/104124854-1d245280-5379-11eb-89f0-d0f51409fc5a.png)
+
