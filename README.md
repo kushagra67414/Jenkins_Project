@@ -130,3 +130,59 @@ Console Output and Stage View =>
 ![Screenshot (1075)](https://user-images.githubusercontent.com/46487696/104125984-164d0e00-5380-11eb-8f6d-9557f54de6f7.png)
 
 
+## Project-5 => Creation of a Declarative Pipeline for our Project
+
+Create a job let say Declarative_petClinic
+
+and configure it by writing the Declarative script.
+
+SCRIPT:
+
+```
+pipeline{
+    agent{label 'master'}
+    tools {
+        maven 'M3'
+    }
+    stages{
+        stage('Checkout'){
+            steps{
+                git branch: 'main' , url: 'https://github.com/kushagra67414/SpringPetClinic.git'
+            }
+        }
+        stage('Build'){
+            steps{
+                bat 'mvn compile'
+            }
+        }
+        stage('Test'){
+            steps{
+                bat 'mvn test'
+            }
+        }
+        stage('Package'){
+            steps{
+                bat 'mvn package'
+            }
+        }
+        stage('Deploy'){
+            steps{
+                sh 'java -jar /var/lib/jenkins/workspace/Declarative_petClinic/target/*.jar'
+            }
+        }
+    }
+}
+```
+
+Here agent can be any, here we have use maven m3 tool (which configure earlier) and the stages of the pipeline is defined under the stages 
+
+
+![Screenshot (1076)](https://user-images.githubusercontent.com/46487696/104151323-bd728980-5402-11eb-94a8-b2e918fada6b.png)
+![Screenshot (1077)](https://user-images.githubusercontent.com/46487696/104151324-bea3b680-5402-11eb-9ecc-4dd5fbc4d0e1.png)
+![Screenshot (1078)](https://user-images.githubusercontent.com/46487696/104151327-bea3b680-5402-11eb-9945-173dea063b9e.png)
+
+
+Now, Build the project and see the Complete Pipeline
+
+![Screenshot (1079)](https://user-images.githubusercontent.com/46487696/104151476-22c67a80-5403-11eb-8bc7-64d41c6e59df.png)
+
