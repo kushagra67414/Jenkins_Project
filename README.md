@@ -38,12 +38,19 @@ go to Build > click on "Add Build Setup" > invoke top-level maven targets > Sele
 Now, Click on the Build now  to have a build of a project and check if the build get Success of Failed.
 
 ![Screenshot (1055)](https://user-images.githubusercontent.com/46487696/104104288-222bc800-52cd-11eb-9ae9-d770919267b5.png)
-t
-Similarly create a test petclinic job at jenkins. Let's say **test_petClinic**.
+
+**Similarly** create a test petclinic job at jenkins. Let's say **test_petClinic**.
 
 ![Screenshot (1056)](https://user-images.githubusercontent.com/46487696/104104339-63bc7300-52cd-11eb-8eca-8bd816c4008e.png)
 ![Screenshot (1057)](https://user-images.githubusercontent.com/46487696/104104340-64eda000-52cd-11eb-97e2-d7e5d06e0fa2.png)
 ![Screenshot (1058)](https://user-images.githubusercontent.com/46487696/104104342-64eda000-52cd-11eb-9417-c68b0574b4cd.png)
+
+**Similarly** create a package petclinic job at jenkins to create build artifact. Let's say package_petClinic.
+
+Also, local machine path where articfact will be stored.<br>
+![image](https://user-images.githubusercontent.com/46487696/120096713-af6f9c00-c14a-11eb-87af-2e7238e5a578.png)
+
+![image](https://user-images.githubusercontent.com/46487696/120096721-b696aa00-c14a-11eb-9f1d-db502bfa4e57.png)
 
 
 
@@ -59,8 +66,14 @@ Go to test_petClinic configuration part > build trigger > Select "BUILD AFTER OT
 
 ![Screenshot (1059)](https://user-images.githubusercontent.com/46487696/104123069-e9442f80-536e-11eb-9309-645f8d23b252.png)
 
+Also, will trigger Package_petClinic job with the help of Test_petClinic job.
+
+![image](https://user-images.githubusercontent.com/46487696/120096718-b3032300-c14a-11eb-8a42-56c0fbf7825d.png)
+
 
 ## Project-3 => Create a Multistage pipeline and viewing using "Build Pipeline Plugin" 
+
+Will trigger from one job to another and store the build artifact locally(Path must be given) and viewing the multistage pipeline.
 
 Here, First Download the given plugin i.e Build Pipeline.
 
@@ -78,10 +91,17 @@ Go to "Pipeline Flow" and Select Initial Job > Click okay
 
 You will be redirect to your pipeline view.
 
-Green : done the execution, Blue : not started yet , Yellow: currently executing , Red : failed
 
-![Screenshot (1063)](https://user-images.githubusercontent.com/46487696/104124852-1bf32580-5379-11eb-951f-88d29c60ad56.png)
-![Screenshot (1065)](https://user-images.githubusercontent.com/46487696/104124854-1d245280-5379-11eb-89f0-d0f51409fc5a.png)
+Green : done the execution, Blue : not started yet , Yellow: currently executing , Red : failed
+![image](https://user-images.githubusercontent.com/46487696/120096864-62d89080-c14b-11eb-9a77-d4868b91aea0.png)
+![image](https://user-images.githubusercontent.com/46487696/120096866-653aea80-c14b-11eb-8c87-1f7f30d7d6d6.png)
+![image](https://user-images.githubusercontent.com/46487696/120096868-679d4480-c14b-11eb-81cf-08edf34e6247.png)
+![image](https://user-images.githubusercontent.com/46487696/120096874-69ff9e80-c14b-11eb-8e04-8d35ae213052.png)
+
+
+Now, After running the complete pipeline the build artifact will be stored locally.
+
+![image](https://user-images.githubusercontent.com/46487696/120096968-c95dae80-c14b-11eb-896a-3b9a9d56854a.png)
 
 
 ## Project-4 => Transformng your delivery pipeline in the form of scripted pipeline 
