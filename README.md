@@ -207,3 +207,22 @@ Now, Build the project and see the Complete Pipeline
 
 ![Screenshot (1079)](https://user-images.githubusercontent.com/46487696/104151476-22c67a80-5403-11eb-8bc7-64d41c6e59df.png)
 
+
+
+## Poll SCM
+
+"Poll SCM" polls the SCM periodically for checking if any changes/ new commits were made and shall build the project if any new commits were pushed since the last build.
+
+Initially- job we initialized was Compile_petClinic
+
+![image](https://user-images.githubusercontent.com/46487696/120915040-2d89f080-c6bf-11eb-9eaa-36002346972d.png)
+
+
+Let set the poll which will fetch the source code from repo to make a latest build periodically. <br>
+Here we are fetching source code ate everyminute means build will be generated at every minute
+
+![image](https://user-images.githubusercontent.com/46487696/120914997-f9aecb00-c6be-11eb-9086-5ce44b57a399.png)
+
+Refresh the Build pipeline view after a minute it will automate the process
+
+![image](https://user-images.githubusercontent.com/46487696/120915024-177c3000-c6bf-11eb-8c42-5fdc7cac775b.png)
